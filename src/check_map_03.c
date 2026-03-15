@@ -70,7 +70,7 @@ static void	control_map_fill(t_game	*game, char **map_copy)
 			if (map_copy[j][i] == COLLECTIBLE)
 			{
 				free_matrix(map_copy);
-				error_and_free_struct(game, "Can't get all collectibles", false);
+				error_and_free_struct(game, "Can't get collectibles", false);
 			}
 			i++;
 		}
