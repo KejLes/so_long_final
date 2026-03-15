@@ -1,0 +1,154 @@
+# 🎮 so_long
+
+**so_long** es un pequeño juego en 2D hecho en C usando la librería gráfica [MLX42](https://github.com/codam-coding-college/MLX42), como parte del programa 42. El objetivo del juego es recorrer un mapa recolectando todos los ítems (`C`) y llegar a la salida (`E`), todo en un entorno visual simpático con referencias al fútbol argentino 😄⚽
+
+![Demo del juego](https://raw.githubusercontent.com/briveraarg/so_long/main/demo/so_long.gif)
+
+---
+
+## 🧠 Requisitos
+
+- Linux o macOS
+- [`cmake`](https://cmake.org/) instalado (requerido por MLX42)
+- Las siguientes librerías incluidas:
+  - [libft](https://github.com/42Paris/42libft)
+  - [ft_printf](https://github.com/42Paris/printf)
+  - [MLX42](https://github.com/codam-coding-college/MLX42)
+
+---
+
+## ⚙️ Compilación
+
+Antes de compilar, asegurate de tener `cmake` instalado para poder construir la MLX42.
+
+### 1. Compilar el proyecto
+
+```bash
+   git clone https://github.com/yourusername/so_long.git
+   cd so_long
+   make
+```
+
+Este comando:
+
+- Compila automáticamente las librerías externas:
+  - [`libft`](libs/libft)
+  - [`ft_printf`](libs/ft_printf)
+  - [`MLX42`](libs/MLX42)
+- Genera el ejecutable `so_long` en el directorio raíz.
+
+### 2. Limpiar archivos intermedios
+
+- Para eliminar los archivos objeto (`.o`):
+
+```bash
+make clean
+```
+
+- Para limpiar completamente (incluye binarios y carpeta de build de MLX42):
+
+```bash
+make fclean
+```
+
+- Para recompilar desde cero:
+
+```bash
+make re
+```
+
+💡 **Nota**: Si estás en Linux, tu `Makefile` enlaza automáticamente las dependencias necesarias (`-lglfw -lm -ldl -lX11 -lpthread -lXrandr -lXi`). En macOS, se usan los frameworks nativos de Cocoa, OpenGL e IOKit.
+
+---
+
+## 🕹️ Cómo jugar
+
+```bash
+./so_long maps/mapa.ber
+```
+
+### Controles
+
+| Tecla       | Acción             |
+|-------------|--------------------|
+| ⬆️ / ⬇️ / ⬅️ / ➡️ | Mover al jugador   |
+| ESC         | Salir del juego    |
+
+Tu misión es recolectar todos los ítems (`C`) y llegar a la salida (`E`). Cuando juntás todo, la salida se abre mágicamente y podés escapar para ganar.
+
+---
+
+## 🗺️ Formato del mapa `.ber`
+
+El mapa debe estar formado por los siguientes caracteres:
+
+- `1` → Pared
+- `0` → Espacio vacío
+- `P` → Posición inicial del jugador
+- `C` → Ítem recolectable
+- `E` → Salida
+
+
+Reglas básicas del mapa:
+
+- Rectangular
+- Rodeado de paredes
+- Debe haber **exactamente un** `P` y `E`, y al menos un `C`
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+so_long/
+├── src/
+│   ├── check_map_*.c       # Validación de mapa
+│   ├── initialize_game_*.c # Inicialización de estructuras y gráficos
+│   ├── move_player_*.c     # Movimiento y lógica del jugador
+│   ├── error_exit.c        # Manejo de errores
+│   ├── utils.c             # Utilidades (memoria, validaciones)
+│   └── main.c              # Función principal
+├── libs/                   # Librerías externas: MLX42, libft, ft_printf
+├── textures/               # Imágenes PNG usadas en el juego
+├── so_long.h               # Header principal
+├── Makefile                # Compilador automático
+└── maps/                   # Mapas de ejemplo
+```
+
+---
+
+## 🌈 Créditos y detalles divertidos
+
+- El juego incluye texturas personalizadas.
+- Los mensajes en terminal son en tono humorísticos 😉
+
+---
+
+## 🧪 Testing y normas
+
+- Maneja errores de archivos, mapas y memoria (valgrind OK).
+- Texturas cargadas desde `./textures/*.png` (validadas antes de iniciar)
+ 
+### Gestión de Errores
+- No se proporcionó archivo
+- El archivo del mapa no existe o esta vacio       
+- El mapa no es rectangular                        
+- No se puede abrir el archivo de mapa             
+- El archivo de mapa contiene caracteres inválidos 
+- El mapa no tiene objetos coleccionables         
+- El mapa no tiene salida                       
+- El mapa no tiene un jugador                   
+- El mapa tiene múltiples salidas o jugadores  
+- El mapa no está cerrado por paredes          
+- Los objetos coleccionables son inalcanzables 
+- La salida es inalcanzable
+- Errores específicos de MLX42
+
+---
+
+## 💬 Contacto
+
+Creado por **Brenda Rivera**  
+📧 brennriveraa@gmail.com
+🇦🇷 Desde Argentina, estudiando en 42 Madrid  
+
