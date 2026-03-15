@@ -26,7 +26,7 @@ char	**free_matrix(char **array)
 	return (NULL);
 }
 
-static	void	next_check_files(char *map)
+static	void	next_check_files()
 {
 	int	fd;
 
@@ -52,7 +52,7 @@ static	void	next_check_files(char *map)
 	close(fd);
 }
 
-void	check_files(char *map)
+void	check_files()
 {
 	int	fd;
 
@@ -72,5 +72,5 @@ void	check_files(char *map)
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	next_check_files(map);
+	next_check_files();
 }

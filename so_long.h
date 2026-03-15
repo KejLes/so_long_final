@@ -78,7 +78,7 @@ typedef struct s_game
 void	msg_and_exit(char *message);
 void	error_and_exit(char *message);
 char	**free_matrix(char **array);
-void	check_files(char *map);
+void	check_files();
 void	error_and_free_struct(t_game *game, char *message, bool use_perror);
 void	error_mlx_and_free_struct(t_game *game, char *message);
 void	error_map_free(char *message, char *map_line, char **map_array);
