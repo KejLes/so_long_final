@@ -54,28 +54,6 @@ void	error_and_free_struct(t_game *game, char *message, bool use_perror)
 
 void	error_mlx_and_free_struct(t_game *game, char *message)
 {
-	if (game->sprites->background)
-		mlx_delete_image(game->mlx, game->sprites->background);
-	if (game->sprites->collectible)
-		mlx_delete_image(game->mlx, game->sprites->collectible);
-	if (game->sprites->down)
-		mlx_delete_image (game->mlx, game->sprites->down);
-	if (game->sprites->left)
-		mlx_delete_image (game->mlx, game->sprites->left);
-	if (game->sprites->right)
-		mlx_delete_image (game->mlx, game->sprites->right);
-	if (game->sprites->up)
-		mlx_delete_image (game->mlx, game->sprites->up);
-	if (game->sprites->player)
-		mlx_delete_image (game->mlx, game->sprites->player);
-	if (game->sprites->exit)
-		mlx_delete_image (game->mlx, game->sprites->exit);
-	if (game->sprites->wall)
-		mlx_delete_image (game->mlx, game->sprites->wall);
-	if (game->sprites->exit_open)
-		mlx_delete_image (game->mlx, game->sprites->exit_open);
-	if (game->sprites)
-		free (game->sprites);
 	mlx_terminate(game->mlx);
 	error_and_free_struct(game, message, true);
 }
