@@ -29,7 +29,6 @@ int	main(int argc, char **argv)
 	if (!game->mlx)
 		error_and_free_struct(game, "MLX initialization failed", true);
 	initialize_struct_img(game);
-	fill_background(game);
 	fill_map(game);
 	mlx_key_hook(game->mlx, &my_keyfuncion, game);
 	mlx_loop(game->mlx);

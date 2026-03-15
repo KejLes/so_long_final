@@ -104,7 +104,6 @@ void	move_player_down(t_game *game, int d_x, int d_y);
 void	move_player_left(t_game *game, int d_x, int d_y);
 void	move_player_right(t_game *game, int d_x, int d_y);
 void	my_keyfuncion(mlx_key_data_t keydata, void *data);
-void	fill_background(t_game *game);
 void	fill_map(t_game *game);
 
 #endif

@@ -1,0 +1,45 @@
+1º tarea: me queda comprobar lo de la otra rama: free_images_with_mlx_terminate
+
+Que básicamente es cambiar la función de error_exit.c para que quede así:
+
+void	error_mlx_and_free_struct(t_game *game, char *message)
+{
+	mlx_terminate(game->mlx);
+	error_and_free_struct(game, message, true);
+}
+
+Se supone que debería de limpiar los recursos igual, quería comprobarlo ejecutando ambas versiones,
+forzar un error y ver los leaks con valgrind.
+
+Si no llego a nada lo dejo con la version original
+
+2º tarea: cambiar los sprites
+
+3º tarea: comprobar qeu en render_image() select puedo incluir los caminos para quitar la
+función fill_background(). Asi queda:
+
+void	render_image_with_background(t_game *game, mlx_image_t *image)
+
+void	render_image_select(t_game *game, size_t y, size_t x)
+{
+	if (game->map[y][x] == WALL)
+		if (mlx_image_to_window(game->mlx, game->sprites->wall,
+				x * PIXELS, y * PIXELS) < 0)
+				error_and_free_struct(game, "Couldn't show the image", true);
+	if (game->map[y][x] == EXIT)
+		if (mlx_image_to_window(game->mlx, game->sprites->exit,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
+	if (game->map[y][x] == PLAYER)
+		if (mlx_image_to_window(game->mlx, game->sprites->player,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
+	if (game->map[y][x] == COLLECTIBLE)
+		if (mlx_image_to_window(game->mlx, game->sprites->collectible,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
+	if (game->map[y][x] == EMPTY)
+		if (mlx_image_to_window(game->mlx, game->sprites->background,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
+}
