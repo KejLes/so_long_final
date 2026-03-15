@@ -12,15 +12,24 @@
 
 #include "so_long.h"
 
-void	render_image_with_background(t_game *game, mlx_image_t *image,
-	size_t y, size_t x)
+void	fill_background(t_game *game)
 {
-	if (mlx_image_to_window(game->mlx, game->sprites->background,
-			x * PIXELS, y * PIXELS) < 0)
-		error_and_free_struct(game, "Couldn't show the image", true);
-	if (mlx_image_to_window(game->mlx, image,
-			x * PIXELS, y * PIXELS) < 0)
-		error_and_free_struct(game, "Couldn't show the image", true);
+	size_t		x;
+	size_t		y;
+
+	y = 0;
+	while (y < game->map_height)
+	{
+		x = 0;
+		while (x < game->map_width)
+		{
+			if (mlx_image_to_window(game->mlx, game->sprites->background,
+					x * PIXELS, y * PIXELS) < 0)
+				error_and_free_struct(game, "Couldn't show the image", true);
+			x++;
+		}
+		y++;
+	}
 }
 
 void	render_image_select(t_game *game, size_t y, size_t x)
@@ -28,13 +37,19 @@ void	render_image_select(t_game *game, size_t y, size_t x)
 	if (game->map[y][x] == WALL)
 		if (mlx_image_to_window(game->mlx, game->sprites->wall,
 				x * PIXELS, y * PIXELS) < 0)
-			error_and_free_struct(game, "Couldn't show the image", true);
+				error_and_free_struct(game, "Couldn't show the image", true);
 	if (game->map[y][x] == EXIT)
-		render_image_with_background(game, game->sprites->exit, y, x);
+		if (mlx_image_to_window(game->mlx, game->sprites->exit,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
 	if (game->map[y][x] == PLAYER)
-		render_image_with_background(game, game->sprites->player, y, x);
+		if (mlx_image_to_window(game->mlx, game->sprites->player,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
 	if (game->map[y][x] == COLLECTIBLE)
-		render_image_with_background(game, game->sprites->collectible, y, x);
+		if (mlx_image_to_window(game->mlx, game->sprites->collectible,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
 }
 
 void	fill_map(t_game *game)
