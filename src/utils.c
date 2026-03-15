@@ -26,7 +26,7 @@ char	**free_matrix(char **array)
 	return (NULL);
 }
 
-static	void	next_check_files()
+static	void	next_check_files(void)
 {
 	int	fd;
 
@@ -52,7 +52,7 @@ static	void	next_check_files()
 	close(fd);
 }
 
-void	check_files()
+void	check_files(void)
 {
 	int	fd;
 
