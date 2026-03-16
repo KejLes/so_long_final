@@ -1,154 +1,100 @@
-# 🎮 so_long
+*Este proyecto ha sido creado como parte del currículo de 42 por kcanales.*
 
-**so_long** es un pequeño juego en 2D hecho en C usando la librería gráfica [MLX42](https://github.com/codam-coding-college/MLX42), como parte del programa 42. El objetivo del juego es recorrer un mapa recolectando todos los ítems (`C`) y llegar a la salida (`E`), todo en un entorno visual simpático con referencias al fútbol argentino 😄⚽
+# so_long
 
-![Demo del juego](https://raw.githubusercontent.com/briveraarg/so_long/main/demo/so_long.gif)
+## Descripción
 
----
+`so_long` es un pequeño juego 2D desarrollado en C como parte del currículo de 42.  
+El objetivo del juego es controlar a un personaje en un mapa cerrado, recoger todos los coleccionables y llegar a la salida.  
+El mapa se carga desde un archivo con extensión `.ber`, se valida (forma, contenido y paredes) y después se renderiza utilizando la librería gráfica MLX42.  
+El proyecto pone el foco en la gestión correcta de memoria, el diseño de estructuras de datos, el manejo de errores y el uso de una librería gráfica mínima.
 
-## 🧠 Requisitos
+## Instrucciones
 
-- Linux o macOS
-- [`cmake`](https://cmake.org/) instalado (requerido por MLX42)
-- Las siguientes librerías incluidas:
-  - [libft](https://github.com/42Paris/42libft)
-  - [ft_printf](https://github.com/42Paris/printf)
-  - [MLX42](https://github.com/codam-coding-college/MLX42)
+### Requisitos
 
----
+- Compilador C compatible (`cc`, `clang` o `gcc`).
+- `make`.
+- `cmake` para compilar MLX42.
+- Librerías del sistema:
+  - En Linux: `glfw`, `X11`, `Xrandr`, `Xi`, `dl`, `pthread`, `m`.
+  - En macOS: frameworks `Cocoa`, `OpenGL`, `IOKit` y `glfw`.
+- Submódulos / carpetas:
+  - `libs/MLX42` (MLX42).
+  - `libs/libft` (libft).
+  - `libs/ft_printf` (ft_printf).
 
-## ⚙️ Compilación
+### Compilación
 
-Antes de compilar, asegurate de tener `cmake` instalado para poder construir la MLX42.
-
-### 1. Compilar el proyecto
+Desde la raíz del repositorio:
 
 ```bash
-   git clone https://github.com/yourusername/so_long.git
-   cd so_long
-   make
+make
 ```
 
 Este comando:
 
-- Compila automáticamente las librerías externas:
-  - [`libft`](libs/libft)
-  - [`ft_printf`](libs/ft_printf)
-  - [`MLX42`](libs/MLX42)
-- Genera el ejecutable `so_long` en el directorio raíz.
+- Compila `libft` y `ft_printf`.
+- Compila y construye MLX42 en `libs/MLX42/build`.
+- Compila los archivos fuente de `src/` y genera el ejecutable `so_long`.
 
-### 2. Limpiar archivos intermedios
-
-- Para eliminar los archivos objeto (`.o`):
+Comandos de limpieza:
 
 ```bash
-make clean
+make clean      # elimina archivos objeto
+make fclean     # elimina objetos, ejecutable y build de MLX42
+make re         # recompila todo desde cero
+make norminette # ejecuta norminette sobre src/ y so_long.h
 ```
 
-- Para limpiar completamente (incluye binarios y carpeta de build de MLX42):
+### Ejecución
+
+El programa se ejecuta pasando un mapa en formato `.ber` como argumento:
 
 ```bash
-make fclean
+./so_long path/al_mapa.ber
 ```
-
-- Para recompilar desde cero:
-
-```bash
-make re
-```
-
-💡 **Nota**: Si estás en Linux, tu `Makefile` enlaza automáticamente las dependencias necesarias (`-lglfw -lm -ldl -lX11 -lpthread -lXrandr -lXi`). En macOS, se usan los frameworks nativos de Cocoa, OpenGL e IOKit.
-
----
-
-## 🕹️ Cómo jugar
-
-```bash
-./so_long maps/mapa.ber
-```
-
-### Controles
-
-| Tecla       | Acción             |
-|-------------|--------------------|
-| ⬆️ / ⬇️ / ⬅️ / ➡️ | Mover al jugador   |
-| ESC         | Salir del juego    |
-
-Tu misión es recolectar todos los ítems (`C`) y llegar a la salida (`E`). Cuando juntás todo, la salida se abre mágicamente y podés escapar para ganar.
-
----
-
-## 🗺️ Formato del mapa `.ber`
-
-El mapa debe estar formado por los siguientes caracteres:
-
-- `1` → Pared
-- `0` → Espacio vacío
-- `P` → Posición inicial del jugador
-- `C` → Ítem recolectable
-- `E` → Salida
-
 
 Reglas básicas del mapa:
 
-- Rectangular
-- Rodeado de paredes
-- Debe haber **exactamente un** `P` y `E`, y al menos un `C`
+- El archivo debe tener extensión `.ber`.
+- El mapa debe ser un rectángulo (todas las filas del mismo ancho).
+- Debe estar completamente rodeado de paredes.
+- Debe contener:
+  - 1 sola posición de jugador.
+  - 1 sola salida.
+  - Al menos 1 coleccionable.
+- Solo se admiten caracteres válidos (pared, vacío, jugador, salida, coleccionable y saltos de línea).
 
----
+Si el mapa es inválido, el archivo no existe o ocurre algún error al leer o renderizar, el programa muestra un mensaje descriptivo y finaliza liberando la memoria reservada.
 
-## 📁 Estructura del proyecto
+### Controles
 
-```
-so_long/
-├── src/
-│   ├── check_map_*.c       # Validación de mapa
-│   ├── initialize_game_*.c # Inicialización de estructuras y gráficos
-│   ├── move_player_*.c     # Movimiento y lógica del jugador
-│   ├── error_exit.c        # Manejo de errores
-│   ├── utils.c             # Utilidades (memoria, validaciones)
-│   └── main.c              # Función principal
-├── libs/                   # Librerías externas: MLX42, libft, ft_printf
-├── textures/               # Imágenes PNG usadas en el juego
-├── so_long.h               # Header principal
-├── Makefile                # Compilador automático
-└── maps/                   # Mapas de ejemplo
-```
+> Sustituye por las teclas exactas que uses en tu implementación.
 
----
+- Movimiento: `W`, `A`, `S`, `D` o flechas de dirección.
+- Salir del juego: tecla `ESC` o cerrar la ventana.
 
-## 🌈 Créditos y detalles divertidos
+## Recursos
 
-- El juego incluye texturas personalizadas.
-- Los mensajes en terminal son en tono humorísticos 😉
+### Documentación y artículos
 
----
+- Documentación oficial de 42 para el proyecto `so_long` (intra de 42).
+- Documentación de MLX42:
+  - Guía de uso de MLX42 (estructuras, `mlx_load_png`, `mlx_texture_to_image`, manejo de ventanas y eventos).
+- Documentación de `glfw` y librerías gráficas relacionadas (según el sistema operativo).
+- Referencias de C estándar:
+  - `cppreference.com` (sección de C).
+  - Tutoriales de gestión de memoria dinámica en C (uso de `malloc`, `calloc`, `free`).
+- Normas de estilo de 42 (Norminette) para la organización del código y los ficheros.
 
-## 🧪 Testing y normas
+### Uso de IA en el proyecto
 
-- Maneja errores de archivos, mapas y memoria (valgrind OK).
-- Texturas cargadas desde `./textures/*.png` (validadas antes de iniciar)
- 
-### Gestión de Errores
-- No se proporcionó archivo
-- El archivo del mapa no existe o esta vacio       
-- El mapa no es rectangular                        
-- No se puede abrir el archivo de mapa             
-- El archivo de mapa contiene caracteres inválidos 
-- El mapa no tiene objetos coleccionables         
-- El mapa no tiene salida                       
-- El mapa no tiene un jugador                   
-- El mapa tiene múltiples salidas o jugadores  
-- El mapa no está cerrado por paredes          
-- Los objetos coleccionables son inalcanzables 
-- La salida es inalcanzable
-- Errores específicos de MLX42
+En este proyecto se ha utilizado IA principalmente como soporte de documentación y redacción:
 
----
-
-## 💬 Contacto
-
-Creado por **Brenda Rivera**  
-📧 brennriveraa@gmail.com
-🇦🇷 Desde Argentina, estudiando en 42 Madrid  
-
+- Ayuda para redactar y estructurar este archivo `README.md` (descripción, instrucciones y sección de recursos).
+- Resolución puntual de dudas sobre:
+  - Comandos de compilación y enlaces con MLX42 y librerías del sistema.
+  - Ajustes en la línea de compilación y en el `Makefile`.
+- La lógica del juego, el diseño de las estructuras, la validación del mapa y la implementación del código en C se han realizado de forma manual, utilizando la documentación oficial y recursos clásicos de aprendizaje de C.  
+- No se ha utilizado IA para generar directamente funciones completas críticas del proyecto (como la lógica de movimiento, la gestión de memoria o la validación del mapa), sino como apoyo para aclarar conceptos y mejorar la claridad de los mensajes de error y la documentación.
