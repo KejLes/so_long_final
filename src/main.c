@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 00:44:13 by kcanales          #+#    #+#             */
-/*   Updated: 2026/03/16 18:00:51 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/03/16 19:48:25 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 		error_and_free_struct(game, "MLX initialization failed", true);
 	initialize_struct_img(game);
 	fill_map(game);
+	mlx_close_hook(game->mlx, &close_window, game);
 	mlx_key_hook(game->mlx, &my_keyfuncion, game);
 	mlx_loop(game->mlx);
 	mlx_terminate(game->mlx);

@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 00:43:21 by kcanales          #+#    #+#             */
-/*   Updated: 2026/03/15 00:43:21 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/03/16 19:33:10 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void	error_map_free(char *message, char *map_line, char **map_array)
 
 void	error_and_free_struct(t_game *game, char *message, bool use_perror)
 {
-if (game->sprites)
-		free(sprites);
+	if (game->sprites)
+		free(game->sprites);
 	if (game->map)
 		free_matrix(game->map);
 	if (game)

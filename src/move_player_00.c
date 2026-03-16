@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 00:44:20 by kcanales          #+#    #+#             */
-/*   Updated: 2026/03/15 00:44:20 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/03/16 19:54:41 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ void	my_keyfuncion(mlx_key_data_t keydata, void *data)
 
 	game = (t_game *) data;
 	if (mlx_is_key_down(game->mlx, KEY_ESC))
-{
+	{
 		free_matrix(game->map);
 		mlx_close_window(game->mlx);
-}
+	}
 	if (keydata.key == ARROW_UP
 		&& (keydata.action == MLX_PRESS || keydata.action == MLX_REPEAT))
 		move_player(game, 'y', 'u');
@@ -84,4 +84,13 @@ void	my_keyfuncion(mlx_key_data_t keydata, void *data)
 	if (keydata.key == ARROW_LEFT
 		&& (keydata.action == MLX_PRESS || keydata.action == MLX_REPEAT))
 		move_player(game, 'x', 'l');
+}
+
+void	close_window(void *param)
+{
+	t_game	*game;
+
+	game = (t_game *)param;
+	free_matrix(game->map);
+	mlx_close_window(game->mlx);
 }

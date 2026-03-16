@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 00:46:03 by kcanales          #+#    #+#             */
-/*   Updated: 2026/03/16 18:01:38 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/03/16 19:52:39 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ void	move_player_left(t_game *game, int d_x, int d_y);
 void	move_player_right(t_game *game, int d_x, int d_y);
 void	my_keyfuncion(mlx_key_data_t keydata, void *data);
 void	fill_map(t_game *game);
+void	close_window(void* param);
 
 #endif
