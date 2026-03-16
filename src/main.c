@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		msg_and_exit("Example to execute: ./so_long map.ber");
 	map = check_map(argv[1]);
-	check_files(argv[1]);
+	check_files();
 	game = initialize_struct(map);
 	check_map_final(game);
 	mlx_set_setting(MLX_STRETCH_IMAGE, true);

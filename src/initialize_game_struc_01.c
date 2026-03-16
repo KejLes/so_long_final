@@ -35,6 +35,10 @@ void	render_image_select(t_game *game, size_t y, size_t x)
 		render_image_with_background(game, game->sprites->player, y, x);
 	if (game->map[y][x] == COLLECTIBLE)
 		render_image_with_background(game, game->sprites->collectible, y, x);
+	if (game->map[y][x] == EMPTY)
+		if (mlx_image_to_window(game->mlx, game->sprites->background,
+				x * PIXELS, y * PIXELS) < 0)
+			error_and_free_struct(game, "Couldn't show the image", true);
 }
 
 void	fill_map(t_game *game)
