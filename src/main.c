@@ -6,7 +6,7 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 00:44:13 by kcanales          #+#    #+#             */
-/*   Updated: 2026/03/15 00:44:13 by kcanales         ###   ########.fr       */
+/*   Updated: 2026/03/16 18:00:51 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int	main(int argc, char **argv)
 	mlx_key_hook(game->mlx, &my_keyfuncion, game);
 	mlx_loop(game->mlx);
 	mlx_terminate(game->mlx);
+	free(game->sprites);
+	free(game);
 	exit (0);
 }

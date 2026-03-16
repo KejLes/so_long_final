@@ -32,6 +32,7 @@ int main(void)
     mlx_key_hook(mlx, &key_hook, mlx);
     mlx_loop(mlx);
     mlx_delete_texture(texture);
+    // mlx_delete_image(mlx, img);
     mlx_terminate(mlx);
     return (0);
 }
