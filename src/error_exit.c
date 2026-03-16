@@ -40,6 +40,8 @@ void	error_map_free(char *message, char *map_line, char **map_array)
 
 void	error_and_free_struct(t_game *game, char *message, bool use_perror)
 {
+if (game->sprites)
+		free(sprites);
 	if (game->map)
 		free_matrix(game->map);
 	if (game)
