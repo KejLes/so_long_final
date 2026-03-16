@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 16:40:09 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 17:37:22 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:27:42 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:27:43 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

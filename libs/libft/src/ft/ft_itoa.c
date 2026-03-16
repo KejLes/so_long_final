@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 14:38:58 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/11 15:39:20 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:49 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:50 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

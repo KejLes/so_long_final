@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 15:26:45 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 16:49:39 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:25:11 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:25:12 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

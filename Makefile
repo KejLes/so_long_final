@@ -48,11 +48,6 @@ OBJS = $(OBJ_DIR)/check_map_00.o $(OBJ_DIR)/check_map_01.o $(OBJ_DIR)/check_map_
 
 INCLUDE = so_long.h
 
-RED			= \033[91;1m
-GREEN		= \033[92;1m
-CLEAR_COLOR	= \033[0m
-CYAN 		= \033[96;1m
-
 OS = $(shell uname)
 ifeq ($(OS), Linux)
 	MLX_FLAGS = -lglfw -lm -ldl -lX11 -lpthread -lXrandr -lXi
@@ -64,20 +59,20 @@ all: $(NAME)
 
 $(NAME): $(LIBFTA) $(MLX42) $(FT_PRINTF) $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBFTA) $(FT_PRINTF) $(MLX42) $(MLX_FLAGS) -I$(MLX42_INC) -o $(NAME)
-	@echo "$(CYAN)✅ Compilado so_long\n$(CLEAR_COLOR)"
+	@echo "		Compilado so_long\n"
 
 $(LIBFTA):
 	@make -C $(LIBFT_DIR)
-	@echo "$(GREEN)✅ Compilado LIBFT\n$(CLEAR_COLOR)"
+	@echo "		Compilado LIBFT\n"
 
 $(FT_PRINTF):
 	@make -C $(FT_PRINTF_DIR)
-	@echo "$(GREEN)✅ Compilado LIBFT_PRINTF\n$(CLEAR_COLOR)"
+	@echo "		Compilado LIBFT_PRINTF\n"
 
 $(MLX42):
 	@cmake -B $(MLX42_DIR)/build $(MLX42_DIR)
 	@cmake --build $(MLX42_DIR)/build
-	@echo "$(GREEN)✅ Compilado MLX42\n$(CLEAR_COLOR)"
+	@echo "		Compilado MLX42\n"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INCLUDE)
 	@mkdir -p $(OBJ_DIR)
@@ -88,14 +83,14 @@ clean:
 	@rm -rf $(OBJ_DIR)
 	@make clean -C $(LIBFT_DIR)
 	@make clean -C $(FT_PRINTF_DIR)
-	@echo "$(RED)⛔ Limpieza de archivos objeto.$(CLEAR_COLOR)"
+	@echo "		Limpieza de archivos objeto."
 
 fclean: clean
 	@$(RM) $(NAME)
 	@rm -rf $(MLX42_DIR)/build
 	@make fclean -C $(LIBFT_DIR)
 	@make fclean -C $(FT_PRINTF_DIR)
-	@echo "$(RED)⛔ Limpieza total (ejecutables y librerías).$(CLEAR_COLOR)"
+	@echo "		Limpieza total (ejecutables y librerías)."
 
 re: fclean all
 

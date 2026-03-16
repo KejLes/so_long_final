@@ -30,23 +30,23 @@ static	void	next_check_files(void)
 {
 	int	fd;
 
-	fd = open("./textures/maradona_right.png", O_RDONLY);
+	fd = open("./textures/saucer_squash_right.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/maradona_up.png", O_RDONLY);
+	fd = open("./textures/saucer_squash_up.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/messi.png", O_RDONLY);
+	fd = open("./textures/exit_close.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/pelotita.png", O_RDONLY);
+	fd = open("./textures/sun.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/trail.png", O_RDONLY);
+	fd = open("./textures/sky.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
@@ -56,19 +56,19 @@ void	check_files(void)
 {
 	int	fd;
 
-	fd = open("./textures/flowers.png", O_RDONLY);
+	fd = open("./textures/cloud.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/god.png", O_RDONLY);
+	fd = open("./textures/exit_open.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/maradona_down.png", O_RDONLY);
+	fd = open("./textures/saucer_squash_down.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);
-	fd = open("./textures/maradona_left.png", O_RDONLY);
+	fd = open("./textures/saucer_squash_left.png", O_RDONLY);
 	if (fd == -1)
 		error_and_exit("Texture files are missing, check the textures folder");
 	close(fd);

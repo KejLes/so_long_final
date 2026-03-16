@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 16:08:17 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 16:36:48 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:27:28 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:27:29 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

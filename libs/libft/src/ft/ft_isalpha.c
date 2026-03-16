@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 16:07:01 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/09 17:55:27 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:30 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:31 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 12:58:18 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 17:11:59 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:27:10 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:27:11 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

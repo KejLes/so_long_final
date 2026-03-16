@@ -16,7 +16,7 @@ void	load_player_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/maradona_down.png");
+	imagen = mlx_load_png("./textures/saucer_squash_down.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->player = mlx_texture_to_image(game->mlx, imagen);
@@ -29,7 +29,7 @@ void	load_player_direction_up(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/maradona_up.png");
+	imagen = mlx_load_png("./textures/saucer_squash_up.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->up = mlx_texture_to_image(game->mlx, imagen);
@@ -42,7 +42,7 @@ void	load_player_direction_down(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/maradona_down.png");
+	imagen = mlx_load_png("./textures/saucer_squash_down.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->down = mlx_texture_to_image(game->mlx, imagen);
@@ -55,7 +55,7 @@ void	load_player_direction_rigt(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/maradona_right.png");
+	imagen = mlx_load_png("./textures/saucer_squash_right.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->right = mlx_texture_to_image(game->mlx, imagen);
@@ -68,7 +68,7 @@ void	load_player_direction_left(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/maradona_left.png");
+	imagen = mlx_load_png("./textures/saucer_squash_left.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->left = mlx_texture_to_image(game->mlx, imagen);

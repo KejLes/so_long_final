@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+         #
+#    By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/09 11:36:05 by brivera           #+#    #+#              #
-#    Updated: 2024/11/15 16:49:16 by brivera          ###   ########.fr        #
+#    Created: 2026/03/16 14:24:35 by kcanales          #+#    #+#              #
+#    Updated: 2026/03/16 14:24:36 by kcanales         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 11:45:49 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 19:00:22 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:22 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:23 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

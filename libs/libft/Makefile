@@ -1,16 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makeoutfile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+         #
+#    By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/09 11:36:05 by brivera           #+#    #+#              #
-#    Updated: 2024/12/17 15:29:53 by brivera          ###   ########.fr        #
+#    Created: 2026/03/16 14:24:59 by kcanales          #+#    #+#              #
+#    Updated: 2026/03/16 14:25:00 by kcanales         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Variables
+ Variables
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I./

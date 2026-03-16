@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera@student.42madrid.com <brivera>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 14:43:32 by brivera           #+#    #+#             */
-/*   Updated: 2025/01/21 16:26:17 by brivera@stu      ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:13 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:14 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

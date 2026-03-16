@@ -16,7 +16,7 @@ void	load_exit_open_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/god.png");
+	imagen = mlx_load_png("./textures/exit_open.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->exit_open = mlx_texture_to_image(game->mlx, imagen);

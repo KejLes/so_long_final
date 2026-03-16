@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 13:27:09 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 17:49:38 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:27:15 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:27:16 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

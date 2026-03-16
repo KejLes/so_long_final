@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com      +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 18:17:55 by brivera           #+#    #+#             */
-/*   Updated: 2024/09/25 10:09:39 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:41 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:42 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

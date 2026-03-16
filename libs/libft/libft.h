@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera@student.42madrid.com <brivera>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 18:33:31 by brivera           #+#    #+#             */
-/*   Updated: 2025/01/21 16:15:17 by brivera@stu      ###   ########.fr       */
+/*   Created: 2026/03/16 14:24:52 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:24:53 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

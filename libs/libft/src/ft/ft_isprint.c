@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com      +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 11:56:57 by brivera           #+#    #+#             */
-/*   Updated: 2024/09/25 10:10:39 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:45 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:46 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

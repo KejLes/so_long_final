@@ -16,7 +16,7 @@ void	load_background_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/trail.png");
+	imagen = mlx_load_png("./textures/sky.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->background = mlx_texture_to_image(game->mlx, imagen);
@@ -29,7 +29,7 @@ void	load_exit_closed_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/messi.png");
+	imagen = mlx_load_png("./textures/exit_close.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->exit = mlx_texture_to_image(game->mlx, imagen);
@@ -42,7 +42,7 @@ void	load_wall_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/flowers.png");
+	imagen = mlx_load_png("./textures/cloud.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->wall = mlx_texture_to_image(game->mlx, imagen);
@@ -55,7 +55,7 @@ void	load_collectible_texture(t_game *game)
 {
 	mlx_texture_t	*imagen;
 
-	imagen = mlx_load_png("./textures/pelotita.png");
+	imagen = mlx_load_png("./textures/sun.png");
 	if (!imagen)
 		error_mlx_and_free_struct(game, "Problem with load_png");
 	game->sprites->collectible = mlx_texture_to_image(game->mlx, imagen);

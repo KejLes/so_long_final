@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera@student.42madrid.com <brivera>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 15:08:58 by brivera           #+#    #+#             */
-/*   Updated: 2025/01/21 16:13:45 by brivera@stu      ###   ########.fr       */
+/*   Created: 2026/03/16 14:28:45 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:28:46 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

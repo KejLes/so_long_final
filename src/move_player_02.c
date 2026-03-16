@@ -26,11 +26,11 @@ void	open_exit(t_game *game)
 void	print_moves(t_game *game)
 {
 	game->moves++;
-	ft_printf("That's it, don't stop! Keep going! Moves: %d\n", game->moves);
+	ft_printf("Move, MOVE!! Moves: %d\n", game->moves);
 }
 
 void	print_final_exit(t_game *game)
 {
-	ft_printf("\nResounding success!\nYou've earned eternal glory.\n");
+	ft_printf("\nResounding success!\n");
 	mlx_close_window(game->mlx);
 }

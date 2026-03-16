@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 12:30:26 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 15:43:15 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:58 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:59 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

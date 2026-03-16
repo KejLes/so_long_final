@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 15:27:56 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/09 18:12:10 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:25:51 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:25:52 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

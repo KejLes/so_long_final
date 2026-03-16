@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 11:05:43 by brivera           #+#    #+#             */
-/*   Updated: 2024/10/10 15:57:30 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:27:03 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:27:04 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

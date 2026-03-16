@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brivera <brivera@student.42madrid.com      +#+  +:+       +#+        */
+/*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 11:52:27 by brivera           #+#    #+#             */
-/*   Updated: 2024/09/25 12:04:57 by brivera          ###   ########.fr       */
+/*   Created: 2026/03/16 14:26:37 by kcanales          #+#    #+#             */
+/*   Updated: 2026/03/16 14:26:38 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
