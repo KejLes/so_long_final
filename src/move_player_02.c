@@ -32,5 +32,6 @@ void	print_moves(t_game *game)
 void	print_final_exit(t_game *game)
 {
 	ft_printf("\nResounding success!\n");
+	free_matrix(game->map);
 	mlx_close_window(game->mlx);
 }
